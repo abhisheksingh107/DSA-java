@@ -1,22 +1,31 @@
 package com.abhishek;
 
+import java.util.Arrays;
+
 public class Remove_Element {
     public static void main(String[] args) {
         int[] nums = {3,2,2,2,3};
         int val = 3;
-        System.out.println(removeElement(nums, val));
+       int[] result =  removeElement(nums, val);
+        System.out.println(
+        Arrays.toString(result));
     }
-    static public int removeElement(int[] nums, int val) {
+    static public int[] removeElement(int[] nums, int val) {
         int i = 0;
-        for(int j = 0; j < nums.length - 1; j++){
-            if(nums[j] != val){
+        for (int j = 0; j < nums.length; j++) {
+            if (nums[j] != val) {
                 nums[i] = nums[j];
                 i++;
             }
         }
-        return i;
+        int[] result = new int[i];
+        for(int k = 0; k < i; k++){
+            result[k] = nums[k];
+        }
+        return result;
+        }
     }
-}
+
 
 
 /*
