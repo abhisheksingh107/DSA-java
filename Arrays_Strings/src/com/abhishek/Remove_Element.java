@@ -12,8 +12,13 @@ public class Remove_Element {
     }
     static public int[] removeElement(int[] nums, int val) {
         int i = 0;
+<<<<<<< HEAD
         for (int j = 0; j < nums.length; j++) {
             if (nums[j] != val) {
+=======
+        for(int j = 0; j < nums.length; j++){
+            if(nums[j] != val){
+>>>>>>> b4efb5ebca260569f1b8941ab9f6536893e3d14f
                 nums[i] = nums[j];
                 i++;
             }
