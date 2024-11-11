@@ -6,30 +6,20 @@ public class Remove_Element {
     public static void main(String[] args) {
         int[] nums = {3,2,2,2,3};
         int val = 3;
-       int[] result =  removeElement(nums, val);
-        System.out.println(
-        Arrays.toString(result));
+        System.out.println(removeElement(nums, val));
     }
-    static public int[] removeElement(int[] nums, int val) {
+    static public int removeElement(int[] nums, int val) {
         int i = 0;
-<<<<<<< HEAD
-        for (int j = 0; j < nums.length; j++) {
-            if (nums[j] != val) {
-=======
-        for(int j = 0; j < nums.length; j++){
-            if(nums[j] != val){
->>>>>>> b4efb5ebca260569f1b8941ab9f6536893e3d14f
-                nums[i] = nums[j];
-                i++;
-            }
-        }
-        int[] result = new int[i];
-        for(int k = 0; k < i; k++){
-            result[k] = nums[k];
-        }
-        return result;
-        }
+          for (int j = 0; j < nums.length; j++) {
+              if (nums[j] != val) {
+                  nums[i] = nums[j];
+                  i++;
+              }
+          }
+          return i;
     }
+}
+
 
 
 
