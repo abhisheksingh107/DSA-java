@@ -19,6 +19,21 @@ public class Remove_Element_SortedARR {
         }
         return i+1;
     }
+
+//    Optimise Way
+    static int remove2(int[] nums) {
+        int count = 1;  // We always keep the first element
+        for (int i = 1; i < nums.length; i++) {  // Start from the second element
+            if (nums[i] != nums[i - 1]) {  // If the current element is not equal to the previous one
+                nums[count] = nums[i];  // Copy it to the 'count' position
+                count++;  // Increment the count to move the 'pointer' to the next valid position
+            }
+        }
+        return count;  // Return the length of the array after removing duplicates
+    }
+
+
+
 }
 
 
